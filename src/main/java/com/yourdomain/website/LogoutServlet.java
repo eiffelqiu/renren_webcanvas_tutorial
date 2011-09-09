@@ -15,6 +15,7 @@ public class LogoutServlet extends HttpServlet {
 	throws ServletException, java.io.IOException {
 		//删除当前会话信息
 		request.getSession().removeAttribute("user");
+		request.getSession().removeAttribute("expiresTime");
 		response.sendRedirect("/login");
 	}
 }

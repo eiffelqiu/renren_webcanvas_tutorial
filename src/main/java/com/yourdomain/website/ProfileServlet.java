@@ -23,6 +23,16 @@ public class ProfileServlet extends HttpServlet {
 			response.sendRedirect("/login");
 			return;
 		}
+		Long expiresTime = (Long)request.getSession().getAttribute("expiresTime");
+		if (expiresTime != null) {
+			long currentTime = System.currentTimeMillis() / 1000;
+			System.out.println("expiresTime = " + expiresTime + "; currentTime = " + currentTime);
+			if (currentTime > expiresTime) {
+				//用户会话过期了，跳转到登录页面去
+				response.sendRedirect("/login");
+				return;
+			}
+		}
 		RequestDispatcher welcomeDispatcher = request.getRequestDispatcher("/views/profile.jsp");
 		welcomeDispatcher.forward(request, response);
 	}
