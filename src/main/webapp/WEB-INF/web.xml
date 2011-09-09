@@ -13,6 +13,14 @@
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
     <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.yourdomain.website.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>ProfileServlet</servlet-name>
         <servlet-class>com.yourdomain.website.ProfileServlet</servlet-class>
     </servlet>
