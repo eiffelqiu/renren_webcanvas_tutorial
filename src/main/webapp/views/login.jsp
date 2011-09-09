@@ -6,7 +6,6 @@
   <title>Renren Website Demo -- Login</title>
 </head>
 <body>
-  <h3>这里是网站登录页面</h3>
   <form method="post" action="/login">
     <label for="username">用户名：</label><input id="username" type="text" name="username"/><br/>
     <label for="password">密码：</label><input id="password" type="password" name="password"/><br/>
