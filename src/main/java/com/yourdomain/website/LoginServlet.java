@@ -20,7 +20,7 @@ public class LoginServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 	throws ServletException, java.io.IOException {
 		request.setAttribute("appId", AppConfig.APP_ID);
-		request.setAttribute("redirectUri", URLEncoder.encode("http://www.yourdomain.com/rr_login", "UTF-8"));
+		request.setAttribute("redirectUri", URLEncoder.encode("http://www.yourdomain.com:8080/rr_login", "UTF-8"));
 		RequestDispatcher welcomeDispatcher = request.getRequestDispatcher("/views/login.jsp");
 		welcomeDispatcher.forward(request, response);
 	}

@@ -41,7 +41,7 @@ public class RenrenLoginServlet extends HttpServlet {
         Map<String, String> parameters = new HashMap<String, String>();
         parameters.put("client_id", AppConfig.API_KEY);
         parameters.put("client_secret", AppConfig.APP_SECRET);
-        parameters.put("redirect_uri", "http://www.yourdomain.com/rr_login");
+        parameters.put("redirect_uri", "http://www.yourdomain.com:8080/rr_login");
         parameters.put("grant_type", "authorization_code");
         parameters.put("code", code);
         String tokenResult = HttpURLUtils.doPost(rrOAuthTokenEndpoint, parameters);

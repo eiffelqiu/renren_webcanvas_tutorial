@@ -26,11 +26,7 @@ step 3
 
 step 4
 -------
-because on Mac OSX, port 80 is restrict for admin user, you should add 'sudo', 
-or you can change port number in pom.xml
+default port is 8080, because on Mac OSX, port 80 is restrict for admin user, you should add 'sudo' if you stick with 80 port, you can change port number in pom.xml
 
-	$ sudo mvn jetty:run      ## add sudo because on Mac OSX, 80 is restrict for admin user
-	
-	or
-	
 	$ mvn jetty:run
+	
